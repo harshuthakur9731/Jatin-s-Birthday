@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Jatin ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#2193b0,#6dd5ed,#3a7bd5);
+overflow-x:hidden;
+color:#1565c0;
+text-align:center;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+pointer-events:none;
+z-index:1;
+}
+
+.container{
+position:relative;
+z-index:2;
+padding:40px 20px;
+}
+
+h1{
+font-size:65px;
+font-family:'Great Vibes',cursive;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px white;}
+to{text-shadow:0 0 25px yellow,0 0 45px white;}
+}
+
+h2{
+margin-top:15px;
+font-size:28px;
+}
+
+.photo{
+margin:40px auto;
+width:280px;
+height:280px;
+border-radius:50%;
+overflow:hidden;
+border:8px solid white;
+box-shadow:0 0 30px rgba(255,255,255,.7);
+animation:float 4s ease-in-out infinite;
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+100%{transform:translateY(0);}
+}
+
+.message{
+max-width:900px;
+margin:40px auto;
+font-size:22px;
+line-height:1.8;
+background:rgba(255,255,255,.15);
+padding:30px;
+border-radius:20px;
+backdrop-filter:blur(10px);
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:20px;
+cursor:pointer;
+background:white;
+color:#ff4d79;
+font-weight:bold;
+transition:.4s;
+margin-top:30px;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+.heart{
+position:fixed;
+font-size:25px;
+animation:fall linear infinite;
+opacity:.8;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(110vh) rotate(360deg);
+}
+}
+
+.balloon{
+position:absolute;
+bottom:-150px;
+font-size:55px;
+animation:rise 10s linear infinite;
+}
+
+@keyframes rise{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(-120vh);
+}
+}
+
+.popup{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup video{
+    width:80%;
+    max-width:800px;
+    border-radius:15px;
+}
+
+.close-btn{
+    position:absolute;
+    top:20px;
+    right:30px;
+    font-size:45px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.close-btn:hover{
+    color:#ff4d79;
+    transform:scale(1.2);
+}
+
+.gift{
+font-size:90px;
+margin-top:30px;
+animation:bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+50%{
+transform:translateY(-20px);
+}
+}
+
+footer{
+padding:50px;
+font-size:20px;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="fireworks"></canvas>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday ❤️</h1>
+
+<h2>My Dear Younger Brother, <br> Jatin 💖</h2>
+
+<div class="photo">
+<img src="jatin.jpg" alt="Jatin">
+</div>
+
+<div class="gift">🎁</div>
+  
+<button onclick="celebrate()">
+🎁 Open Your Birthday Surprise
+</button>
+
+
+<!-- VEDIO -->
+ 
+<div id="videoPopup" class="popup">
+
+    <span class="close-btn" onclick="closeVideo()">&times;</span>
+
+    <video id="birthdayVideo" controls>
+        <source src="birthday.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+</div>
+
+<div class="message">
+
+<p>
+
+🎉 Dear Jatin,
+
+Happy Birthday to the most amazing younger brother! 🎉🎂
+
+You bring happiness, laughter, and positive energy wherever you go. Watching you grow into such a wonderful person makes me incredibly proud.
+
+On your special day, there is something I want to share with you from the heart. Whatever your goals and dreams may be, never lose focus on your studies. Your ambitions are important, but your education is equally important and should never be ignored.
+
+Working hard toward your goals is a great quality, but remember that success comes from working both hard and smart. Always respect and cherish the people who love and care about you. Be mindful of your words and actions, and avoid doing anything that may unintentionally hurt them.
+
+I know you never mean to hurt anyone, but it's important to understand when something affects others and to respect their feelings, boundaries, and emotions. That understanding will make you not only successful but also a better person.
+
+That's all I wanted to tell you today.
+
+On this special day, I wish you endless success, good health, happiness, and all the achievements you've ever dreamed of.
+
+May every year of your life be filled with exciting adventures, unforgettable memories, and beautiful moments with family and friends.
+
+Always keep smiling, believe in yourself, and chase your dreams with confidence and determination.
+
+Thank you for being such a wonderful brother. I'm always proud to have you in my life.
+
+Happy Birthday once again! Enjoy your special day to the fullest. ❤️🎉
+
+
+🎂 Happy Birthday, Jatin! 🎉<br>
+
+Wishing you a every year full of success, joy, and countless blessings.<br>
+
+❤️ With lots of love,
+Your Brother
+
+</p>
+
+</div>
+
+<button onclick="celebrate()">
+🎁 Open Your Birthday Surprise
+</button>
+
+<footer>
+
+Made with ❤️ for My Brother Jatin
+
+</footer>
+
+</div>
+
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mp3">
+</audio>
+
+<script>
+
+// Floating Hearts
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+const emojis=["🎉","🎊","⭐","✨","🎂","🥳","🎈","🎁"];
+heart.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=4+Math.random()*6+"s";
+
+heart.style.fontSize=(20+Math.random()*30)+"px";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>heart.remove(),10000);
+
+}
+
+setInterval(createHeart,300);
+
+
+// Balloons
+
+for(let i=0;i<15;i++){
+
+let b=document.createElement("div");
+
+b.className="balloon";
+
+b.innerHTML="🎈";
+
+b.style.left=Math.random()*100+"vw";
+
+b.style.animationDuration=(8+Math.random()*6)+"s";
+
+b.style.animationDelay=Math.random()*5+"s";
+
+document.body.appendChild(b);
+
+}
+
+
+// Button
+
+function celebrate(){
+
+    const music = document.getElementById("music");
+    const video = document.getElementById("birthdayVideo");
+
+    document.getElementById("videoPopup").style.display = "flex";
+
+    music.play();
+    video.play();
+}
+
+function closeVideo(){
+
+    const popup = document.getElementById("videoPopup");
+    const video = document.getElementById("birthdayVideo");
+
+    video.pause();
+    video.currentTime = 0; // Start from beginning next time
+
+    popup.style.display = "none";
+}
+
+window.onclick = function(event){
+
+    const popup = document.getElementById("videoPopup");
+
+    if(event.target === popup){
+        closeVideo();
+    }
+
+}
+
+document.getElementById("birthdayVideo").addEventListener("ended", function(){
+    closeVideo();
+});
+
+// Fireworks
+
+const canvas=document.getElementById("fireworks");
+const ctx=canvas.getContext("2d");
+
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+
+let particles=[];
+
+function firework(){
+
+for(let i=0;i<150;i++){
+
+particles.push({
+
+x:canvas.width/2,
+
+y:canvas.height/2,
+
+vx:(Math.random()-0.5)*10,
+
+vy:(Math.random()-0.5)*10,
+
+alpha:1
+
+});
+
+}
+
+}
+
+firework();
+
+function animate(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+particles.forEach((p,index)=>{
+
+p.x+=p.vx;
+
+p.y+=p.vy;
+
+p.alpha-=0.01;
+
+ctx.beginPath();
+
+ctx.arc(p.x,p.y,3,0,Math.PI*2);
+
+ctx.fillStyle="rgba(255,255,255,"+p.alpha+")";
+
+ctx.fill();
+
+if(p.alpha<=0){
+
+particles.splice(index,1);
+
+}
+
+});
+
+requestAnimationFrame(animate);
+
+}
+
+animate();
+
+</script>
+
+</body>
+</html>
